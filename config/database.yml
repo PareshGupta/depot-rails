@@ -1,0 +1,22 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  username: paresh
+  password: vinsol
+  host: localhost
+  socket: /private/tmp/mysql.sock
+  database: depot_development
+
+staging:
+  adapter: mysql2
+  username: <%= ENV['MYSQL_USERNAME'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  host: <%= ENV['MYSQL_ADDRESS'] %>
+
+production:
+  adapter: mysql2
+  username: <%= ENV['MYSQL_USERNAME'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  host: <%= ENV['MYSQL_ADDRESS'] %>
